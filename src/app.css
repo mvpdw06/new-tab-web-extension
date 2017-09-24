@@ -1,0 +1,99 @@
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  overflow: hidden;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 100%;
+  overflow: hidden;
+}
+
+.container {
+  height: 100vh;
+}
+
+.git-logo {
+  position: absolute;
+  width: 160px;
+  z-index: 999;
+  top: 0;
+  right: 0;
+}
+
+.title {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  background-color: #1c4348;
+  color: #FFE699;
+}
+
+.title > h1 {
+  font-size: 50px;
+}
+
+.title > a {
+  z-index: 999;
+}
+
+.title > p {
+  margin-top: -30px;
+  font-size: 20px;
+}
+
+.content {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-left: 20%;
+}
+
+.content ul {
+  margin: 0;
+  width:100%;
+}
+
+.content ul li {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.content ul li a {
+  font-size: 30px;
+  text-decoration: none;
+  color: #1c4348;
+}
+
+h3 {
+  margin: 0;
+  font-size: 50px;
+  padding-left: 10px;
+  color: goldenrod;
+}
+
+.group .group h3 {
+  padding-left: 50px;
+}
+
+.searchInput {
+  font-size: 80px;
+}
+
+.quickPanel {
+  text-align: center;
+}
+
+.quickPanel ul li {
+  display: inline;
+  margin-right: 30px;
+}
+
+.quickIcon {
+  width: 100px;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
