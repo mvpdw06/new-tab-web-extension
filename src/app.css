@@ -11,6 +11,8 @@ body {
 
 .container {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .git-logo {
@@ -43,7 +45,7 @@ body {
 }
 
 .content {
-  height: 100%;
+  flex: 1;
   overflow-x: hidden;
   overflow-y: auto;
   padding-left: 20%;
