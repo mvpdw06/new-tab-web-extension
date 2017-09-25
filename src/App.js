@@ -46,7 +46,7 @@ class App extends PureComponent {
     isChromeExt
       ? chrome.bookmarks.getTree(tree => {
           const data = tree[0].children[0].children.filter(data => {
-            return data.children && data.title === 'Quick'
+            return data.children && data.title === 'Xuenn'
           })
           self.setState({
             dataList: data[0].children
@@ -90,9 +90,21 @@ class App extends PureComponent {
   }
 
   handleSearchKeyPress = e => {
-    const { search } = this.state
-    if (e.key === 'Enter' && search)
-      window.location.href = `${google}/search?q=${search}`
+    const { search, dataList } = this.state
+    if (e.key === 'Enter' && search) {
+      let url
+      const filterData = this.filterBookmarks(search, dataList)
+      if (filterData.length > 0) {
+        url = filterData[0].url
+        if (filterData[0].children) {
+          url = filterData[0].children[0].url
+        }
+      } else {
+        url = `${google}/search?q=${search}`
+      }
+
+      window.location.href = url
+    }
   }
 
   quickIconRedirect = key => {

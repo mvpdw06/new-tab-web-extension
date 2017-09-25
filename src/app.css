@@ -27,8 +27,11 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
-  background-color: #1c4348;
   color: #FFE699;
+  background: -webkit-linear-gradient(180deg,#6DBC9D,#1c4348);
+  background: -o-linear-gradient(180deg,#6DBC9D,#1c4348);
+  background: -moz-linear-gradient(180deg,#6DBC9D,#1c4348);
+  background: linear-gradient(180deg,#6DBC9D,#1c4348);
 }
 
 .title > h1 {
