@@ -98,7 +98,15 @@ h3 {
   width: 100px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.quickIcon:hover {
+  display: inline-block;
+  animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+  0% { transform:translate(0, 0px) rotate(0); }
+ 25% { transform:translate(0, -10px) rotate(5deg); }
+ 50% { transform:translate(0, 0px) rotate(0); }
+ 75% { transform:translate(0, -10px) rotate(-5deg); }
+100% { transform:translate(0, 0px) rotate(0); }
 }
