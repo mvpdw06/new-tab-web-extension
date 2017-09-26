@@ -11,6 +11,10 @@ import {
 
 const isChromeExt = typeof chrome !== 'undefined' && chrome.extension
 
+const isFirefox = window.navigator.userAgent.indexOf('Firefox') > -1
+
+const folderName = 'Quick'
+
 const githubImg = isChromeExt
   ? chrome.extension.getURL('/assets/github.png')
   : require('./images/github.png')
@@ -45,9 +49,14 @@ class App extends PureComponent {
     const self = this
     isChromeExt
       ? chrome.bookmarks.getTree(tree => {
-          const data = tree[0].children[0].children.filter(data => {
-            return data.children && data.title === 'Xuenn'
-          })
+          const data = isFirefox
+            ? tree[0].children[1].children.filter(data => {
+                return data.children && data.title === folderName
+              })
+            : tree[0].children[0].children.filter(data => {
+                return data.children && data.title === folderName
+              })
+
           self.setState({
             dataList: data[0].children
           })
