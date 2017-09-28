@@ -37,6 +37,7 @@ class App extends PureComponent {
 
     this.state = {
       dataList: [],
+      folderList: [],
       search: ''
     }
   }
@@ -47,23 +48,36 @@ class App extends PureComponent {
 
   getDataList = () => {
     const self = this
+    let folderList = []
     isChromeExt
       ? chrome.bookmarks.getTree(tree => {
           const data = isFirefox
             ? tree[0].children[1].children.filter(data => {
+                if (data.children) folderList.push(data.title)
                 return data.children && data.title === folderName
               })
             : tree[0].children[0].children.filter(data => {
+                if (data.children) folderList.push(data.title)
                 return data.children && data.title === folderName
               })
 
           self.setState({
-            dataList: data[0].children
+            dataList: data[0].children,
+            folderList
           })
         })
       : fetch('./fakeData.json')
           .then(resp => resp.json())
-          .then(data => self.setState({ dataList: data }))
+          .then(data => {
+            data.map(singleData => {
+              if (singleData.children) folderList.push(singleData.title)
+            })
+
+            self.setState({
+              dataList: data,
+              folderList
+            })
+          })
           .catch(err => console.log(`fetch fake data error!`))
   }
 
