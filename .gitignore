@@ -4,3 +4,4 @@ yarn.lock
 dist/assets
 dist.crx
 dist.pem
+upload/*

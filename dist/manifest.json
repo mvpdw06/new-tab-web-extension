@@ -1,5 +1,5 @@
 {
-  "name": "new-tab-quick-links-extension",
+  "name": "bookmark-management-in-new-tab",
   "version": "1",
   "manifest_version": 2,
   "description": "A chrome extension for quick links in new tab.",
