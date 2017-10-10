@@ -38,6 +38,13 @@ const filterSelectFolderData = (data, selectFolder) => {
     return data.children && data.title === selectFolder
   })
 
+  if (filterData.length === 0) {
+    return {
+      dataList: [],
+      folderList
+    }
+  }
+
   return {
     dataList: filterData[0].children,
     folderList
