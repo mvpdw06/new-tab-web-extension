@@ -2,7 +2,7 @@ import { extStorageGetAPI } from 'API/extAPI'
 
 const initData = {
   userName: 'Ryan',
-  selectFolder: 'Xuenn'
+  selectFolder: 'Quick'
 }
 
 const initSettingProvider = async () => {
