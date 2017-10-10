@@ -1,6 +1,7 @@
 {
-  "name": "bookmark-management-in-new-tab",
-  "version": "1",
+  "name": "Flash Link in New Tab",
+  "short_name": "FLNT",
+  "version": "2",
   "manifest_version": 2,
   "description": "A chrome extension for quick links in new tab.",
   "icons": { 

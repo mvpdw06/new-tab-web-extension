@@ -11,7 +11,7 @@ const urlProvider = key => {
   switch (key) {
     case 'myRepository':
       return gitRepository
-    case 'Goolge':
+    case 'Google':
       return google
     case 'Facebook':
       return facebook

@@ -7,6 +7,7 @@ import BookmarkList from 'App/BookmarkList'
 import QuickPanel from 'App/QuickPanel'
 
 import imageProvider from 'Config/imageProvider'
+
 import dataProvider from 'API/dataProvider'
 import initSettingProvider from 'API/initSettingProvider'
 import { extStorageSetAPI } from 'API/extAPI'
@@ -86,6 +87,7 @@ class App extends PureComponent {
           url = filterData[0].children[0].url
         }
       } else {
+        const google = urlProvider('Google')
         url = `${google}/search?q=${search}`
       }
 
