@@ -9,7 +9,7 @@ import style from './app.css'
 const rootElement = document.getElementById('app')
 
 const renderApp = () => {
-  const App = require('./app')
+  const App = require('App/app')
   render(
     <AppContainer>
       <App />
@@ -20,4 +20,4 @@ const renderApp = () => {
 
 renderApp()
 
-module.hot && module.hot.accept('./app.js', () => renderApp())
+module.hot && module.hot.accept('App/app.js', () => renderApp())

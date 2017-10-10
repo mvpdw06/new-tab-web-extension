@@ -104,9 +104,49 @@ h3 {
 }
 
 @keyframes shake {
-  0% { transform:translate(0, 0px) rotate(0); }
- 25% { transform:translate(0, -10px) rotate(5deg); }
- 50% { transform:translate(0, 0px) rotate(0); }
- 75% { transform:translate(0, -10px) rotate(-5deg); }
-100% { transform:translate(0, 0px) rotate(0); }
+  0%    { transform: translate(0, 0px)    rotate(0);     }
+  25%   { transform: translate(0, -10px)  rotate(5deg);  }
+  50%   { transform: translate(0, 0px)    rotate(0);     }
+  75%   { transform: translate(0, -10px)  rotate(-5deg); }
+  100%  { transform: translate(0, 0px)    rotate(0);     }
+}
+
+.material-icons.float { 
+  z-index: 999;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+}
+
+.material-icons.bigger { 
+  font-size: 36px; 
+}
+
+.material-icons.active { 
+  color: #FB8C00; 
+}
+
+.material-icons:hover {
+  display: inline-block;
+  animation: rotate 1s;
+}
+
+@keyframes rotate {
+  100%  { transform: rotate(180deg); }
+}
+
+.setting-title h2 {
+  color: #8600FF;
+  text-transform: uppercase;
+  font-size: xx-large;
+}
+
+.settings li {
+  list-style-type: none;
+  color: #8600FF;
+  font-weight: bold;
+}
+
+.setting-item {
+  padding-left: 10px !important;
 }

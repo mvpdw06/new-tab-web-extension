@@ -82,7 +82,15 @@ const webpackConfig = {
               },
             }
         ]
-    }
+    },
+    resolve: {
+      alias: {
+        App: path.resolve(__dirname, 'src/component/'),
+        Config: path.resolve(__dirname, 'src/config/'),
+        Image: path.resolve(__dirname, 'src/image/'),
+        API: path.resolve(__dirname, 'src/api/'),
+      }
+    },
 }
 
 module.exports = webpackConfig;
